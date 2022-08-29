@@ -1,16 +1,18 @@
 html,
 body {
-  height: 100%;
+  min-height: 100vh;
+  background-color: #f5f5f5;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-body {
-  align-items: center;
-  padding-top: 10px;
-  padding-bottom: 40px;
-  background-color: #f5f5f5;
+.body-administrador {
+  background-color: #282828;
+  color: #f5f5f5;
 }
 
+
+
+/* Bootstrap code */
 .form-signin {
   max-width: 330px;
   padding: 15px;
@@ -32,6 +34,8 @@ body {
   border-top-right-radius: 0;
 }
 
+
+/* Nav bar */
 .icon__log-in {
     padding: 1.5rem;
 }
@@ -39,8 +43,85 @@ body {
 .nav {
     display: flex;
     justify-content: flex-end;
-    padding: 0 1rem;
+    padding: 1rem 1rem;
 }
 .nav_item {
     list-style: none;
 }
+
+
+/* Vista Inicio */
+.icon_nav {
+  padding-right: .5rem;
+} 
+
+.vista__inicio {
+  background: #f5f5f5;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Grids */
+.grid {
+  display: grid;
+}
+
+.grid--1x2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--1x3 {
+   grid-template-columns: repeat(3, 1fr);
+}
+
+.vistaPacientes1 {
+  background: #f5f5f5;
+  height: 100vh;
+  width: 100%;
+  align-content: center;
+  align-items: start;
+  justify-content: center;
+  justify-items: center;
+  grid-template: repeat(2, auto) / 40fr 60fr;
+  padding-left: 30px;
+  padding-top: 30px;
+  padding-right: 50px;
+  padding-bottom: 30px;
+
+}
+
+.containerr { 
+  margin: 0 !important;
+  background: #f5f5f5;
+  height: 50vh;
+  width: 100%;
+  padding: 1rem .5rem ;
+  grid-template: repeat(2, auto) / 40fr 60fr;
+  gap: 30px;
+  align-items: start;
+  justify-items: auto;
+}
+
+/* Media Objects */
+.media {
+  display: flex;
+  padding-bottom: 1.5rem;
+}
+
+.media__body {
+  margin: 0 1rem;
+}
+
+/* Historia clinica section */
+.historia-clinica {
+  margin: .5rem;
+}
+
+.historia-clinica__heading {
+  margin:0 0 4rem 0;
+}
+
+
+
+
+
