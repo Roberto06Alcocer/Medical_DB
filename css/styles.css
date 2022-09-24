@@ -300,6 +300,7 @@ p {
 
 .media__date {
   font-size: 1.4rem;
+  margin-bottom: 0;
 }
 
 .media__body {
@@ -327,6 +328,14 @@ p {
   padding: 10px;
   }
 
+.grid--2x2 {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 1fr 100%;
+}
+
 @media screen and (min-width: 768px) {
   .item1 { 
     grid-area: barraEstado; 
@@ -353,3 +362,26 @@ p {
   }
 }
 
+
+/* Comment-group*/
+.itemUser { 
+  grid-area: user; 
+}
+.itemButton { 
+  grid-area: button; 
+  align-self: auto;
+}
+.itemComment { 
+  grid-area: comment; 
+  font-size: 1.6rem;
+}
+
+.comment__color {
+  color: #0396a6;
+}
+
+.comment-group {
+  grid-template-areas:
+      'user button'
+      'comment comment';
+}
