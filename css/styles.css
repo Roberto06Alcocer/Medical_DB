@@ -374,6 +374,7 @@ p {
 .itemComment { 
   grid-area: comment; 
   font-size: 1.6rem;
+  margin-left: 6.5rem;
 }
 
 .comment__color {
@@ -384,4 +385,11 @@ p {
   grid-template-areas:
       'user button'
       'comment comment';
+}
+
+@media screen and (min-width:768px) {
+  .itemComment { 
+    margin-left: 4rem;
+    font-size: 1.2rem;
+  }
 }
