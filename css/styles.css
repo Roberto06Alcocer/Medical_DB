@@ -319,3 +319,37 @@ p {
   margin: 0 .5rem;
 }
 }
+
+/* Grids */
+.grid {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+  }
+
+@media screen and (min-width: 768px) {
+  .item1 { 
+    grid-area: barraEstado; 
+  }
+  .item2 { 
+    grid-area: avisos; 
+  }
+  .item3 { 
+    grid-area: comentarios; 
+  }
+  .item4 { 
+    grid-area: citas; 
+  }
+  .grid {
+    grid-template-areas:
+      'barraEstado barraEstado'
+      'avisos comentarios'
+      'citas citas';
+    }
+  .grid--3x2 {
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+  }
+}
+
