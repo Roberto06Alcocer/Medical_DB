@@ -183,3 +183,8 @@ p {
     font-size: 2.5rem;
   }
 }
+
+/* Icons */
+.icon--primary {
+  color: var(--color-headings);
+}
