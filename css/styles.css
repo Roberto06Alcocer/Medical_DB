@@ -132,6 +132,12 @@ body {
   --color-body: #918ca4; 
 }
 
+*, 
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+/* Typography*/
 html {
   font-size: 62.5%;
 }
@@ -187,4 +193,46 @@ p {
 /* Icons */
 .icon--primary {
   color: var(--color-headings);
+}
+
+/* Buttons*/
+
+.btn {
+  font-size: .5rem; 
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: .4rem .6rem;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.btn--primary {
+  background: var(--color-primary);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.btn--primary:hover {
+  background: #0b698b;
+}
+
+.btn--secondary {
+  background: var(--color-secondary);
+  color: #ffff;
+}
+
+.btn--secondary:hover {
+  background: #0396a6
+}
+
+@media screen and (min-width: 1024px) {
+  .btn--primary {
+    font-size: 1rem;
+  }
+
+  .btn--secondary {
+    font-size: 1rem;
+  }
 }
