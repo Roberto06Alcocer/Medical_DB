@@ -176,7 +176,15 @@ body {
   line-height: 1.5;
 }
 
+.saludo {
+  font-size: 3.5rem;
+}
+
 @media screen and (min-width: 1024px) {
+  .saludo {
+    font-size: 5rem;
+  }
+
   h1 {
     font-size: 3.5rem;
   }
