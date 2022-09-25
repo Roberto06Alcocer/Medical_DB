@@ -126,11 +126,12 @@ body {
 
 
 :root {
-  --color-primary: #018abd;
-  --color-secondary: #97cbdc;
-  --color-headings: #004581;
-  --color-body: #918ca4; 
-  --color-border: #ccc;  
+  --color-primary: #40CFFF;
+  --color-secondary: #7CD9F9;
+  --color-accent: #B5FEFF;
+  --color-headings: #004F98;
+  --color-body: #686B69; 
+  --color-border: #B4B7B5;  
   --border-radius: 6px;
 }
 
@@ -160,15 +161,15 @@ h3 {
 }
 
 h1 {
-  font-size: 7rem;
-}
-
-h2 {
   font-size: 4rem;
 }
 
-h3 {
+h2 {
   font-size: 3rem;
+}
+
+h3 {
+  font-size: 2rem;
 }
 
 p {
@@ -177,20 +178,21 @@ p {
 
 @media screen and (min-width: 1024px) {
   body {
-    font-size: 1.8rem ;
+    font-size: 3.4rem ;
   }
 
   h1 {
-    font-size: 7.5rem;
+    font-size: 5rem;
+    margin-bottom: 2rem;
   }
 
   h2 {
-    font-size: 5rem;
+    font-size: 4rem;
     margin: 0;
   }
 
   h3 {
-    font-size: 2.5rem;
+    font-size: 3.6rem;
   }
 }
 
@@ -202,7 +204,10 @@ p {
 
 .icon--primary {
   color: var(--color-headings);
-  fill: var(--color-headings);
+}
+
+.icon--nav {
+  color: var(--color-body);
 }
 
 /* Buttons*/
@@ -220,13 +225,13 @@ p {
 }
 
 .btn--primary {
-  background: var(--color-primary);
+  background: var(--color-headings);
   color: rgba(255, 255, 255, 0.9);
   align-self: center;
 }
 
 .btn--primary:hover {
-  background: #0b698b;
+  background: var(--color-primary);
 }
 
 .btn--secondary {
@@ -238,7 +243,7 @@ p {
 }
 
 .btn--secondary:hover {
-  background: #0396a6;
+  background: var(--color-secondary);
   color: #ffff;
 }
 
@@ -260,7 +265,7 @@ p {
 }
 
 ::placeholder {
-  color: var(--color-primary);
+  color: var(--color-headings);
   font-size: 1.4rem;
   opacity: .5;
 }
@@ -284,7 +289,7 @@ p {
   }
 
   ::placeholder {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 
 }
@@ -383,7 +388,7 @@ p {
 }
 
 .comment__color {
-  color: #0396a6;
+  color: var(--color-secondary);
 }
 
 .comment-group {
@@ -458,11 +463,11 @@ a {
 }
 
 .nav__item > a {
-  color: black;
+  color: var(--color-body);
   transition: color 0.3s;
 }
 .nav__item > a:hover {
-  color: white;
+  color: var(--color-border);
 }
 
 .nav__toggler {
@@ -477,6 +482,9 @@ a {
 
 .nav__brand {
   transform: translateY(5px);
+  color: var(--color-headings);
+  fill: var(--color-headings);
+
 }
 
 @media screen and (min-width: 768px) {
