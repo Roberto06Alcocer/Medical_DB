@@ -366,6 +366,10 @@ body {
   font-size: 1.5em;
 }
 
+.fa-1xC {
+  font-size: 1.3em;
+}
+
 .input-group .input--comment {
   border: 0;
   flex-grow: 1;
