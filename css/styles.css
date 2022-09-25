@@ -464,7 +464,7 @@ a {
 
 /* Nav */
 .nav {
-  background: #ffff;
+  background: var(--color-headings);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -483,19 +483,19 @@ a {
 }
 
 .nav__item > a {
-  color: var(--color-accent);
+  color: var(--color-secondary);
   transition: color 0.3s;
 }
 .nav__item > a:hover {
-  color: var(--color-primary);
+  color: var(--color-border);
 }
 
 .nav__icon {
-  color: var(--color-accent);
-  fill: var(--color-accent);
+  color: var(--color-secondary);
+  fill: var(--color-secondary);
 }
-.icon--nav:hover {
-  color: var(--color-primary);
+.nav__icon:hover {
+  color: var(--color-border);
 }
 
 .nav__toggler {
@@ -509,7 +509,7 @@ a {
 }
 
 .nav__brand {
-  transform: translateY(5px);
+  transform: translateY(2px);
   color: var(--color-accent);
   fill: var(--color-accent);
 
