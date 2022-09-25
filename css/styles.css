@@ -294,7 +294,7 @@ body {
 /* Grids */
 .grid {
   display: grid;
-  gap: 15px;
+  gap: 30px;
   padding: 10px;
   }
 
