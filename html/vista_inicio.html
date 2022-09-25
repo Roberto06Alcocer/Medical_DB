@@ -14,20 +14,31 @@
     <title>vista_inicio</title>
   </head>
   <body>
-    <header>
-      <nav class="nav collapsible">
-        <a href="/" class="nav__brand">
-          <i class="fa-solid fa-staff-snake fa-2x nav nav__icon"></i>
-        </a>
-        <i class="fa-solid fa-bars fa-2x nav__icon nav__toggler"></i>
+    <h1>Comentarios</h1>
+    <div class="grid--2x2 comment-group">
+      <div class="media-doctors itemUser">
+        <div class="media__image">
+          <div>
+            <i
+              class="fa-solid fa-circle-user fa-2x commentsUser__color"
+            ></i>
+          </div>
+        </div>
+        <div class="media__comment">
+          <h2 class="media__name commentsUser__color">Oralis Xxxxxx</h2>
+          <h3 class="media__date">SEPTIEMBRE 24, 2022 | 18:19</h3>
+        </div>
+      </div>
 
-        <ul class="list nav__list collapsible__content">
-          <li class="nav__item"><a href="#">Inicio</a></li>
-          <li class="nav__item"><a href="#">Pacientes</a></li>
-          <li class="nav__item"><a href="#">Consultas</a></li>
-          <li class="nav__item"><a href="#">Ayuda</a></li>
-        </ul>
-      </nav>
+      <button class="btn btn--secondary itemButton">Responder</button>
+      <p class="itemComment media__comment">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+        aliquid doloremque velit laborum accusamus est. Lorem ipsum dolor
+        sit, amet consectetur adipisicing elit. Voluptas voluptatibus
+        blanditiis hic unde harum adipisci odit ea repellat aut ullam!
+      </p>
+    </div>
+
     </header>
 
     <script src="/js/main.js"></script>
