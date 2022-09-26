@@ -219,7 +219,7 @@ body {
 .btn {
   font-weight: 600;
   text-transform: uppercase;
-  padding: .4rem .6rem;
+  padding: .8rem .8rem;
   border: 0;
   border-radius: var(--border-radius);
   cursor: pointer;
