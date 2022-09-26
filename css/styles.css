@@ -783,3 +783,70 @@ a {
     }
   
   }
+
+  /* ***************************** VISTA_PACIENTES_EXPEDIENTE CLINICO ********************************** */
+/* Grids */
+.grid_pacientes_expediente {
+  display: grid;
+  gap: 30px;
+  padding: 10px;
+  }
+
+@media screen and (min-width: 768px) {
+  .itemPaciente { 
+    grid-area: paciente; 
+  }
+  .itemResumen { 
+    grid-area: resumen; 
+  }
+  .itemExpediente { 
+    grid-area: expediente; 
+  }
+
+  .grid_pacientes_expediente {
+    grid-template-areas:
+      'paciente resumen'
+      'expediente expediente';
+    }
+  .grid_pacientes_expediente--2x2 {
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr 1fr;
+
+  }
+ 
+}
+
+/* Media Object */
+
+.media__image_expediente {
+  font-size: 4rem; 
+}
+
+.media_rightSide {
+  margin-left: 1.5rem;
+}
+.media__name_expediente {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 1.8rem;
+}
+
+.media__data_expediente {
+ font-size: 1.6rem;
+ margin-bottom: 0;
+}
+
+@media screen and (min-width: 1024px) {
+
+  .media__image_expediente {
+    font-size: 5rem; 
+  }
+  .media__name_expediente {
+    font-size: 2rem;
+  }
+  
+  .media__data_expediente {
+    font-size: 1.6rem;
+  }
+
+}
