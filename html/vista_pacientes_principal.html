@@ -35,18 +35,22 @@
         <h1 class="saludoPacientes">¡Hola, Edgar!</h1>
       </div>
 
-      <section class="itemRegistro">
+      <section class="itemRegistro"></section>
+
+      <section class="itemBusqueda">
         <div>
-          <h2>Registro</h2>
+          <h2>Búsqueda</h2>
         </div>
-        <div class="btnRegistro">
-          <button class="btnPacientes btnPacientes--registro">
-            Registrar un nuevo paciente
-          </button>
+
+        <div class="input-groupPacientes btnRegistro">
+          <input
+            type="text"
+            class="input--placeHolder"
+            placeholder="Introduce un nombre, apellido, celular, CURP..."
+          />
+          <button class="btn btn--primary">Buscar</button>
         </div>
       </section>
-
-      <section class="itemBusqueda"></section>
     </section>
 
     <script src="/js/main.js"></script>
