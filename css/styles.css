@@ -176,16 +176,9 @@ body {
   line-height: 1.5;
 }
 
-.saludo {
-  font-size: 3.5rem;
-  transition: color 0.4s;
-}
 
 @media screen and (min-width: 1024px) {
-  .saludo {
-    font-size: 5rem;
-  }
-
+  
   h1 {
     font-size: 3.5rem;
   }
@@ -213,6 +206,122 @@ body {
   color: var(--color-headings);
 }
 
+/* Links */
+a {
+  text-decoration: none;
+}
+
+/* Lists */
+
+.list {
+  list-style: none;
+  padding-left: 0;
+  color: var(--color-headings);
+
+}
+
+/* Collapsibles */
+.collapsible__header {
+  display: flex;
+  justify-content: space-between; 
+}
+
+.collapsible__heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+
+.collapsible__content { 
+  max-height: 0;
+  overflow: hidden;
+  transition: all  0.3s;
+}
+
+.collapsible--expanded .collapsible__content {
+  max-height: 100vh;
+  opacity: 1;
+}
+
+
+/* Nav bar */
+.nav {
+  background: var(--color-headings);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: .5rem .5rem;
+  align-items: center;
+}
+
+.nav__list {
+  width: 100%;
+  margin: 0;
+  font-size: 3rem;
+}
+
+.nav__item {
+  padding: 0 1rem;
+}
+
+.nav__item > a {
+  color: var(--color-secondary);
+  transition: color 0.3s;
+}
+.nav__item > a:hover {
+  color: var(--color-border);
+}
+
+.nav__icon {
+  color: var(--color-secondary);
+  fill: var(--color-secondary);
+}
+.nav__icon:hover {
+  color: var(--color-border);
+}
+
+.nav__toggler {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.nav.collapsible--expanded .nav__toggler {
+  opacity: 0.5;
+
+}
+
+.nav__brand {
+  transform: translateY(2px);
+  color: var(--color-accent);
+  fill: var(--color-accent);
+
+}
+
+#nav__active {
+  color: var(--color-border);
+}
+
+@media screen and (min-width: 1024px) {
+  .nav__toggler {
+    display: none;
+  }
+
+  .nav__list {
+    width: auto;
+    display: flex;
+    font-size: 2rem;
+    max-height: 100%;
+    opacity: 1 ;
+  }
+
+  .nav__item {
+    border: 0;
+  }
+
+  .fa-2x {
+    font-size: 1.8em;
+  }
+}
 
 
 /* Buttons*/
@@ -227,6 +336,139 @@ body {
   text-align: center;
 }
 
+
+/* Grids */
+.grid {
+  display: grid;
+  gap: 30px;
+  padding: 10px;
+  }
+
+
+/* ***************************** VISTA_INICIO ********************************** */
+
+
+.grid--2x2 {
+  display: grid;
+  gap: 10px;
+  padding: 15px;
+  grid-template-columns: 85% 15%;
+  grid-template-rows: 1fr 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .item1 { 
+    grid-area: barraEstado; 
+  }
+  .item2 { 
+    grid-area: avisos; 
+  }
+  .item3 { 
+    grid-area: comentarios; 
+  }
+  .item4 { 
+    grid-area: citas; 
+  }
+  .grid {
+    grid-template-areas:
+      'barraEstado barraEstado'
+      'avisos comentarios'
+      'citas citas';
+    }
+  .grid--3x2 {
+    grid-template-rows: auto 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+
+  }
+  .grid--2x2 {
+    grid-template-columns: 85% 15%;
+  }
+}
+
+
+/* ----------- Section barraEstado ------------ */
+.saludo {
+  font-size: 3.5rem;
+  transition: color 0.4s;
+}
+
+@media screen and (min-width: 1024px) {
+  .saludo {
+    font-size: 5rem;
+  }
+}
+
+/* ----------- Section avisos ------------ */
+/* Slider */
+.slide {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 50vh;
+  overflow-x: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slide1 {
+  background-image: url("/images/covid.jpeg")
+}
+
+.slide2 {
+  background-image: url("/images/torax.jpeg")
+}
+
+.slide3 {
+  background-image: url("/images/vacuna.jpeg")
+}
+
+.arrow {
+  cursor: pointer;
+  position: relative;
+  top: 50%;
+  margin-top: -35px;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+#arrow-left {
+  border-width: 20px 30px 20px 0;
+  border-color: transparent var(--color-primary) transparent transparent;
+  left: 0.1rem;
+  top: 20rem;
+  margin-left: 10px;
+  opacity: 0.5;
+}
+
+#arrow-right {
+  border-width: 20px 0 20px 30px;
+  border-color: transparent transparent transparent var(--color-primary);
+  left: 44rem;
+  top: -13rem;
+  margin-right: 10px;
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 1024px) {
+  #arrow-left {
+    left: 0;
+    top: 19rem;
+    margin-left: 10px;
+  }
+  
+  #arrow-right {
+    left: 57.5rem;
+    top: -14rem;
+    margin-right: 10px;
+  }
+}
+
+
+
+/* ----------- Section comentarios ------------ */
+/* Buttons*/
 .btn--primary {
   background: var(--color-headings);
   color: rgba(255, 255, 255, 0.9);
@@ -299,49 +541,6 @@ body {
   }
 }
 
-/* Grids */
-.grid {
-  display: grid;
-  gap: 30px;
-  padding: 10px;
-  }
-
-.grid--2x2 {
-  display: grid;
-  gap: 10px;
-  padding: 15px;
-  grid-template-columns: 85% 15%;
-  grid-template-rows: 1fr 100%;
-}
-
-@media screen and (min-width: 768px) {
-  .item1 { 
-    grid-area: barraEstado; 
-  }
-  .item2 { 
-    grid-area: avisos; 
-  }
-  .item3 { 
-    grid-area: comentarios; 
-  }
-  .item4 { 
-    grid-area: citas; 
-  }
-  .grid {
-    grid-template-areas:
-      'barraEstado barraEstado'
-      'avisos comentarios'
-      'citas citas';
-    }
-  .grid--3x2 {
-    grid-template-rows: auto 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-
-  }
-  .grid--2x2 {
-    grid-template-columns: 85% 15%;
-  }
-}
 
 
 /* Inputs */
@@ -432,123 +631,7 @@ font-size: 1rem;
 
 }
 
-/* Links */
-a {
-  text-decoration: none;
-}
-
-/* Lists */
-
-.list {
-  list-style: none;
-  padding-left: 0;
-  color: var(--color-headings);
-
-}
-
-/* Collapsibles */
-.collapsible__header {
-  display: flex;
-  justify-content: space-between; 
-}
-
-.collapsible__heading {
-  margin-top: 0;
-  font-size: 3rem;
-}
-
-
-.collapsible__content { 
-  max-height: 0;
-  overflow: hidden;
-  transition: all  0.3s;
-}
-
-.collapsible--expanded .collapsible__content {
-  max-height: 100vh;
-  opacity: 1;
-}
-
-
-/* Nav */
-.nav {
-  background: var(--color-headings);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  padding: .5rem .5rem;
-  align-items: center;
-}
-
-.nav__list {
-  width: 100%;
-  margin: 0;
-  font-size: 3rem;
-}
-
-.nav__item {
-  padding: 0 1rem;
-}
-
-.nav__item > a {
-  color: var(--color-secondary);
-  transition: color 0.3s;
-}
-.nav__item > a:hover {
-  color: var(--color-border);
-}
-
-.nav__icon {
-  color: var(--color-secondary);
-  fill: var(--color-secondary);
-}
-.nav__icon:hover {
-  color: var(--color-border);
-}
-
-.nav__toggler {
-  opacity: 1;
-  cursor: pointer;
-}
-
-.nav.collapsible--expanded .nav__toggler {
-  opacity: 0.5;
-
-}
-
-.nav__brand {
-  transform: translateY(2px);
-  color: var(--color-accent);
-  fill: var(--color-accent);
-
-}
-
-#nav__active {
-  color: var(--color-border);
-}
-
-@media screen and (min-width: 1024px) {
-  .nav__toggler {
-    display: none;
-  }
-
-  .nav__list {
-    width: auto;
-    display: flex;
-    font-size: 2rem;
-    max-height: 100%;
-    opacity: 1 ;
-  }
-
-  .nav__item {
-    border: 0;
-  }
-
-  .fa-2x {
-    font-size: 1.8em;
-  }
-}
-
+/* ----------- Section citas ------------ */
 /* Tables */
 .dates-table {
   border-collapse: collapse;
@@ -583,71 +666,6 @@ a {
   border-bottom: 2px solid var(--color-primary);
 }
 
-/* Slider */
-.slide {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 50vh;
-  overflow-x: hidden;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.slide1 {
-  background-image: url("/images/covid.jpeg")
-}
-
-.slide2 {
-  background-image: url("/images/torax.jpeg")
-}
-
-.slide3 {
-  background-image: url("/images/vacuna.jpeg")
-}
-
-.arrow {
-  cursor: pointer;
-  position: relative;
-  top: 50%;
-  margin-top: -35px;
-  width: 0;
-  height: 0;
-  border-style: solid;
-}
-
-#arrow-left {
-  border-width: 20px 30px 20px 0;
-  border-color: transparent var(--color-primary) transparent transparent;
-  left: 0.1rem;
-  top: 20rem;
-  margin-left: 10px;
-  opacity: 0.5;
-}
-
-#arrow-right {
-  border-width: 20px 0 20px 30px;
-  border-color: transparent transparent transparent var(--color-primary);
-  left: 44rem;
-  top: -13rem;
-  margin-right: 10px;
-  opacity: 0.5;
-}
-
-@media screen and (min-width: 1024px) {
-  #arrow-left {
-    left: 0;
-    top: 19rem;
-    margin-left: 10px;
-  }
-  
-  #arrow-right {
-    left: 57.5rem;
-    top: -14rem;
-    margin-right: 10px;
-  }
-}
 
 
 /* ***************************** VISTA_PACIENTES_PRINCIPAL ********************************** */
@@ -665,8 +683,6 @@ a {
   gap: 30px;
   padding: 10px;
   }
-
-
 
   @media screen and (min-width: 768px) {
     .saludoPacientes {
@@ -694,6 +710,9 @@ a {
     }
   }
 
+/* ----------- Section barra ------------ */
+
+/* ----------- Section registro ------------ */
   /* Buttons */
   .btnPacientes {
     font-weight: 600;
@@ -724,13 +743,6 @@ a {
     margin: 60px;
   }
 
-  .btnBusqueda {
-    background: var(--color-primary);
-  }
-  .btnBusqueda:hover {
-    background: var(--color-headings);
-  }
-
   @media screen and (min-width:768px) {
     .btnPacientes--registro {
       padding: 1rem 1em;
@@ -741,8 +753,18 @@ a {
     }
   }
 
-  /* Input */
-  
+
+  /* ----------- Section busqueda ------------ */
+  /* Buttons */
+  .btnBusqueda {
+    background: var(--color-primary);
+  }
+  .btnBusqueda:hover {
+    background: var(--color-headings);
+  }
+
+
+  /* Inputs */
   .input-groupPacientes {
     padding: .5rem .5rem;
     height: 50px;
@@ -792,10 +814,18 @@ a {
   padding: 10px;
   }
 
+  .itemPaciente { 
+    margin-top: 20px;
+  }
+  .itemResumen {
+    margin-top: 20px;
+  }
+
 @media screen and (min-width: 768px) {
   .itemPaciente { 
     grid-area: paciente; 
   }
+
   .itemResumen { 
     grid-area: resumen; 
   }
@@ -816,24 +846,36 @@ a {
  
 }
 
+
+/* ----------- Section paciente ------------ */
 /* Media Object */
+.media-pacient_expediente {
+  display: flex;
+  justify-content: flex-start;
+}
 
 .media__image_expediente {
   font-size: 4rem; 
+  color: var(--color-body);
 }
 
 .media_rightSide {
-  margin-left: 1.5rem;
+  margin-left: 2rem;
 }
 .media__name_expediente {
   margin-top: 0;
   margin-bottom: 0;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: 500;
+  color: var(--color-body);
 }
 
 .media__data_expediente {
  font-size: 1.2rem;
  margin-bottom: 0;
+ color: #000;
+ opacity: .8;
+ 
 }
 
 @media screen and (min-width: 1024px) {
@@ -842,11 +884,37 @@ a {
     font-size: 5rem; 
   }
   .media__name_expediente {
-    font-size: 2rem;
+    font-size: 3.5rem;
   }
   
   .media__data_expediente {
     font-size: 1.6rem;
   }
 
+}
+
+  /* Buttons */
+.btn_expediente_crearConsulta {
+  width: 100%;
+  background: var(--color-headings);
+  color: rgba(255, 255, 255, 0.9);
+  padding: .6rem .6rem;
+  align-self: center;
+  font-size: 1.5rem; 
+  height: 40px;
+  margin-top: 2rem;
+}
+
+.btn_expediente_crearConsulta:hover {
+  background: var(--color-accent);
+}
+
+
+@media screen and (min-width: 1024px) {
+  .btn_expediente_crearConsulta {
+    padding: .8rem .8rem;
+    font-size: 1.6rem; 
+    height: 50px;
+    margin-top: 3rem;
+  }
 }
