@@ -917,3 +917,69 @@ font-size: 1rem;
   }
 
 }
+
+
+/* ----------- Section resumen ------------ */
+
+.navResumen {
+  --bs-nav-link-padding-x: 1rem;
+    --bs-nav-link-padding-y: 0.5rem;
+    --bs-nav-link-font-weight: ;
+    --bs-nav-link-color: var(--color-headings);
+    --bs-nav-link-hover-color: var(--color-primary);
+    --bs-nav-link-disabled-color: #6c757d;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.nav-tabsResumen {
+  --bs-nav-tabs-border-width: 1px;
+  --bs-nav-tabs-border-color: #dee2e6;
+  --bs-nav-tabs-border-radius: 0.375rem;
+  --bs-nav-tabs-link-hover-border-color: #e9ecef #e9ecef #dee2e6;
+  --bs-nav-tabs-link-active-color: #495057;
+  --bs-nav-tabs-link-active-bg: #fff;
+  --bs-nav-tabs-link-active-border-color: #dee2e6 #dee2e6 #fff;
+  border-bottom: var(--bs-nav-tabs-border-width) solid var(--bs-nav-tabs-border-color);
+}
+
+.tabsResumen {
+  margin-right: 20px;
+  font-size: 2rem;
+}
+
+.contentTab {
+  padding: 2rem 2.5rem;
+  font-size: 1.6rem;
+}
+
+.activeTab {
+  color: var(--color-body);
+  transition: color 0.4s;
+}
+.activeTab:hover {
+  color: var(--color-border);
+}
+
+.inactiveTab {
+  color: var(--color-headings);
+  transition: color 0.4s;
+}
+.inactiveTab:hover {
+  color:var(--color-border);
+}
+
+@media screen and (min-width: 1024px) {
+  .tabsResumen {
+    font-size: 2.2rem;
+  }
+
+  .contentTab {
+    font-size: 1.8rem;
+  }
+
+}
