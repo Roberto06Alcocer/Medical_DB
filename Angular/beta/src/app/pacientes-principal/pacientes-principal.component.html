@@ -1,0 +1,49 @@
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/normalize.css" />
+    <link rel="stylesheet" href="/css/styles.css " />
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/18365ec15f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>vista_pacientes_principal</title>
+  </head>
+  <body>
+    <section class="gridPacientes gridPacientes--2x2">
+      <div class="itemBarra">
+        <h1 class="saludo">¡Hola, Edgar!</h1>
+      </div>
+
+      <section class="itemRegistro">
+        <div>
+          <h2>Registro</h2>
+        </div>
+        <div class="btnRegistro">
+          <button class="btnPacientes btnPacientes--registro">
+            Registrar un nuevo paciente
+          </button>
+        </div>
+      </section>
+
+      <section class="itemBusqueda">
+        <div>
+          <h2>Búsqueda</h2>
+        </div>
+
+        <div class="input-groupPacientes btnRegistro">
+          <input
+            type="text"
+            class="input--placeHolder"
+            placeholder="Introduce un nombre, apellido, celular, CURP..."
+          />
+          <button class="btn btn--primary" [routerLink]='["/expedientes"]' routerLinkActive="active">Buscar</button>
+        </div>
+      </section>
+    </section>
+
+    <script src="/js/main.js"></script>
+  </body>

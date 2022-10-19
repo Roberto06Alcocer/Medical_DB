@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <!-- Icons -->
+    <script
+      src="https://kit.fontawesome.com/18365ec15f.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>vista_inicio</title>
+  </head>
+  <body>
+    <section class="grid grid--3x2">
+      <div style="height: 100px" class="item1">
+        <h1 class="saludo">¡Hola, Edgar!</h1>
+      </div>
+
+      <section class="item2">
+        <div>
+          <h1>Avisos</h1>
+
+          <div id="arrow-left" class="arrow"></div>
+          <div class="slide slide1"></div>
+          <div class="slide slide2"></div>
+          <div class="slide slide3"></div>
+          <div id="arrow-right" class="arrow"></div>
+        </div>
+      </section>
+
+      <section class="item3">
+        <h1>Comentarios</h1>
+
+        <div class="grid--2x2 comment-group">
+          <div class="media-doctors itemUser">
+            <div class="media__image">
+              <div>
+                <i
+                  class="fa-solid fa-circle-user fa-2x commentsUser__color"
+                ></i>
+              </div>
+            </div>
+            <div class="media__comment">
+              <h2 class="media__name commentsUser__color">Oralis Xxxxxx</h2>
+              <h3 class="media__date">SEPTIEMBRE 24, 2022 | 18:19</h3>
+            </div>
+          </div>
+
+          <button class="btn btn--secondary itemButton">Responder</button>
+          <p class="itemComment media__comment">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate
+            aliquid doloremque velit laborum accusamus est. Lorem ipsum dolor
+            sit, amet consectetur adipisicing elit. Voluptas voluptatibus
+            blanditiis hic unde harum adipisci odit ea repellat aut ullam!
+          </p>
+        </div>
+
+        <div class="grid--2x2 comment-group response-mode">
+          <div class="media-doctors itemUser">
+            <div class="media__image">
+              <div>
+                <i
+                  class="fa-solid fa-circle-user fa-2x commentsUser__color"
+                ></i>
+              </div>
+            </div>
+            <div class="media__comment">
+              <h2 class="media__name commentsUser__color">Rocio Xxxxxx</h2>
+              <h3 class="media__date">SEPTIEMBRE 25, 2022 | 16:49</h3>
+            </div>
+          </div>
+
+          <button class="btn btn--secondary itemButton">Responder</button>
+          <p class="itemComment media__comment">
+            Voluptas voluptatibus blanditiis hic unde harum adipisci odit ea
+            repellat aut ullam! laborum accusamus est.
+          </p>
+        </div>
+
+        <div class="input-group">
+          <div>
+            <i class="fa-solid fa-circle-user fa-1x icon--primary"></i>
+          </div>
+          <input
+            type="text"
+            class="input--comment"
+            placeholder="Realiza un comentario..."
+          />
+          <button class="btn btn--primary">Comentar</button>
+        </div>
+      </section>
+
+      <section class="item4">
+        <h1>Consultas del día</h1>
+        <table class="dates-table">
+          <tr>
+            <th>No.</th>
+            <th>Nombre</th>
+            <th>Edad</th>
+            <th>Sexo</th>
+            <th>...</th>
+          </tr>
+          <tr>
+            <td>1.-</td>
+            <td>Itzel Xxxxxx</td>
+            <td>26</td>
+            <td>F</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>2.-</td>
+            <td>Daniela Xxxxxx</td>
+            <td>28</td>
+            <td>F</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>3.-</td>
+            <td>Ricardo Xxxxxx</td>
+            <td>27</td>
+            <td>M</td>
+            <td></td>
+          </tr>
+        </table>
+      </section>
+    </section>
+
+    <script src="/js/main.js"></script>
+  </body>
+</html>
