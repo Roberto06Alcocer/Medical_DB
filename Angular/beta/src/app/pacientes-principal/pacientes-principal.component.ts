@@ -12,4 +12,15 @@ export class PacientesPrincipalComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  validpaciente = true;
+
+  paciente(pat: string){
+    if (pat == "Samuel"){
+      this.validpaciente = false;
+    }
+    else{
+      this.validpaciente = true;
+    }
+  }
+
 }

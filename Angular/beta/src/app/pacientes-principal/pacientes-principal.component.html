@@ -39,8 +39,10 @@
             type="text"
             class="input--placeHolder"
             placeholder="Introduce un nombre, apellido, celular, CURP..."
+            #name
+            (keyup)="paciente(name.value)"
           />
-          <button class="btn btn--primary" [routerLink]='["/expedientes"]' routerLinkActive="active">Buscar</button>
+          <button class="btn btn--primary" [routerLink]='["/expedientes"]' [disabled]="validpaciente">Buscar</button>
         </div>
       </section>
     </section>
