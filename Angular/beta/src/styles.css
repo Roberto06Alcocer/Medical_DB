@@ -428,15 +428,15 @@ a {
 }
 
 .slide1 {
-  background-image: url("/images/covid.jpeg")
+  background-image: url("src\assets\images\covid.jpeg")
 }
 
 .slide2 {
-  background-image: url("/images/torax.jpeg")
+  background-image: url("src\assets\images\torax.jpeg")
 }
 
 .slide3 {
-  background-image: url("/images/vacuna.jpeg")
+  background-image: url("src\assets\images\vacuna.jpeg")
 }
 /*   HASTA AQUI ME FUNCIONAN BIEN LAS FLECHAS DE LOS AVISOS       By: Samuel Néstor A.*/
 .arrow {
